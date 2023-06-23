@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  * {
+    @apply font-[Poppins]
+    
+   
+    
+  }
+}
+
+@keyframes gradientBackground {
+  0% { background-color: #233876; }
+  50% { background-color: #42389D; }
+  75% { background-color: #362F78; }
+  100% { background-color: #233876; }
+}
+
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #3387be 0.89%,
+    #3387be 17.23%,
+    
+    #3387be 55.12%,
+    #1976ce 71.54%,
+    #345fbd 100%
+  );/*#7fe2e6 42.04%, */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+ 
+
+body {
+  background-color: #F9F6F7;
+  
+}
+
+
+.bg-blue-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+}
+
+
+.bg-grey-gradient{
+  background: linear-gradient(
+    157.81deg,
+    #eef5fa -43.27%,
+    #a0b4c7 -21.24%,
+    #196fb9 12.19%,
+    rgb(165, 185, 207) 29.82%,
+    #417aac 51.94%,
+    #7ea3c4 90.29%
+  );
+}
