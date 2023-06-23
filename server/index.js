@@ -11,7 +11,7 @@ const multer = require('multer');
 const fs = require('fs');
 const uploadMiddleware = multer({ dest: 'uploads/' });
 const salt = bcrypt.genSaltSync(10);
-
+require('dotenv').config();
 app.use(cors({credentials:true,origin:'http://localhost:5173'}));
 app.use(express.json());
 app.use(cookieParser());
@@ -157,7 +157,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
   
   
 
-const CONNECTION_URL = 'mongodb+srv://emirsimsek2:emirsimsek2123@cluster0.guunxiz.mongodb.net/?retryWrites=true&w=majority';
+const CONNECTION_URL = process.env.MONGO_URL;
 const PORT = process.env.PORT || 5000;
 
 
